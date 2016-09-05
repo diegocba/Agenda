@@ -1,34 +1,30 @@
 <h2>Persona</h2>
 <section>
-	<form>
+	<form action="guardar.php" method="POST">
 		<input required="true" type="text" name="Apellido" placeholder="Apellido">
 		<input required="true" type="text" name="Nombre" placeholder="Nombre">
 		<input type="email" name="Email" placeholder="E-mail">
 		<input type="number" name="Telefono" placeholder="Telefono">
-		<select> Paises 
-		<?php 		
-		define connect.php
+		<select name="Pais">
+			<option value="-1"> Elija un pais</option>
 
-			$tabla = "paises";
-			$sql = "SELECT * FROM PAISES";
-			$rs=$bdmotor ->query($sql);
+				<?php 		
+					include 'connect.php';
 
-				//faltan procesos antes de esto
-			for($i=1;$rs[$i];$i++)
-			{
-				echo"<option>.REG[$i].</option>";
-			}
+					$sql = 'SELECT * FROM PAISES';
+					$rs = $bdmotor->query($sql);
 
+					while ($row=$rs->fetch_row())
+					{
+						//printf("%s,%s,\n",$row[0],$row[1]);
+						//print_r($row);
 
-
-
-
-
-
-		?>
+						echo "<option value=\"$row[0]\"> $row[1]</option>";
+					}
+				?>
 
 		</select>	
-		<input type="text" name="Direccion" placeholder="Direccion">
+		<!-- <input type="text" name="Direccion" placeholder="Direccion"> -->
 		<input type="submit" value="Guardar">
 	</form>
 
