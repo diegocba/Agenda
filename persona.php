@@ -5,6 +5,9 @@
 		<input required="true" type="text" name="Nombre" placeholder="Nombre">
 		<input type="email" name="Email" placeholder="E-mail">
 		<input type="number" name="Telefono" placeholder="Telefono">
+		<input type="hidden" name="Observaciones">
+		<input type="hidden" name="Direcciones">
+		<input type="hidden" name="Ubicacion">
 		<select name="Pais">
 			<option value="-1"> Elija un pais</option>
 
