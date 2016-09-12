@@ -19,9 +19,6 @@
 
 					while ($row=$rs->fetch_row())
 					{
-						//printf("%s,%s,\n",$row[0],$row[1]);
-						//print_r($row);
-
 						echo "<option value=\"$row[0]\"> $row[1]</option>";
 					}
 				?>

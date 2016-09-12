@@ -49,7 +49,7 @@
 				'$observaciones', 
 				'$direcciones', 
 				'$ubicacion', 
-				$pais_id
+				 $pais_id
 		)";
 
 		$rs = $bdmotor->query($sql);
@@ -65,9 +65,10 @@
 		{
 			echo "Su consulta ha sido realizada con exito.";
 
-			
-		}
+		}	
 
+		//$rs->close();
 	}
 
+	$bdmotor->close();
 ?>
