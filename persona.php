@@ -21,6 +21,8 @@
 					{
 						echo "<option value=\"$row[0]\"> $row[1]</option>";
 					}
+
+
 				?>
 
 		</select>	
@@ -28,5 +30,8 @@
 		<input type="submit" value="Guardar">
 	</form>
 
+	<?php 		
+		echo "<a href=\"index.html?\"> Volver al menu </a>";			
+	?>
 </section>
 

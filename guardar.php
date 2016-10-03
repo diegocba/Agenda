@@ -26,7 +26,7 @@
 		// 	echo $my_POST[$i]."</br>";
 		// }
 
-		$sql= " INSERT INTO `julianma_agenda`.`personas`
+		$sql= "INSERT INTO `julianma_agenda`.`personas`
 		(
 				`personas_id`, 
 				`personas_nombre`, 
@@ -66,6 +66,8 @@
 			echo "Su consulta ha sido realizada con exito.";
 
 		}	
+
+		echo "<a href=\"index.html?\"> Volver al menu </a>";
 
 		//$rs->close();
 	}
